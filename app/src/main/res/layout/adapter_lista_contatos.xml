@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Fabio Pelloso"
+            android:textSize="17sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/telefone"
+                android:layout_toLeftOf="@+id/favorito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11 998760671"
+                />
+
+            <ImageView
+                android:id="@+id/favorito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/star"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
