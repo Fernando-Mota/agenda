@@ -1,7 +1,6 @@
-package br.com.halph.agenda.activities;
+package br.com.halph.agenda.adapters;
 
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.com.halph.agenda.R;
+import br.com.halph.agenda.models.Contato;
 
 /**
  * Created by Android on 07/02/2017.
@@ -18,7 +18,7 @@ import br.com.halph.agenda.R;
 
 public class ContatosAdapter extends RecyclerView.Adapter<ContatosAdapter.ContatosViewHolder> {
 
-    List<Contato> contatos;
+    private List<Contato> contatos;
 
     @Override
     public ContatosViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -55,6 +55,11 @@ public class ContatosAdapter extends RecyclerView.Adapter<ContatosAdapter.Contat
             telefone = (TextView) itemView.findViewById(R.id.telefone);
             favorito = (ImageView) itemView.findViewById(R.id.favorito);
         }
+    }
+
+    public void setContatos(List<Contato> contatos) {
+        this.contatos = contatos;
+
     }
 
 }

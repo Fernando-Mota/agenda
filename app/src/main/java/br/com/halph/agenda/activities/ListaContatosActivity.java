@@ -2,15 +2,15 @@ package br.com.halph.agenda.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
 import br.com.halph.agenda.R;
+import br.com.halph.agenda.adapters.ContatosAdapter;
+import br.com.halph.agenda.models.Contato;
 
 public class ListaContatosActivity extends AppCompatActivity {
 
@@ -25,7 +25,7 @@ public class ListaContatosActivity extends AppCompatActivity {
 
         List<Contato> contatos = Arrays.asList(new Contato("9999-9999", "Zé", false), new Contato("9999-9999", "Maria", false), new Contato("9999-9999", "Tereza", false));
         ContatosAdapter contatosAdapter = new ContatosAdapter();
-        contatosAdapter.contatos = contatos;
+        contatosAdapter.setContatos(contatos);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         recyclerViewListaContatos.setAdapter(contatosAdapter);

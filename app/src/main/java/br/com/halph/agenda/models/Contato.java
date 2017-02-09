@@ -1,4 +1,4 @@
-package br.com.halph.agenda.activities;
+package br.com.halph.agenda.models;
 
 /**
  * Created by Android on 07/02/2017.
